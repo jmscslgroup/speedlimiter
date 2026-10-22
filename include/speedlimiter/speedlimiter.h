@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'speedlimiter'.
 //
-// Model version                  : 2.4
+// Model version                  : 2.11
 // Simulink Coder version         : 26.1 (R2026a) 20-Nov-2025
-// C/C++ source code generated on : Thu Oct 22 16:01:18 2026
+// C/C++ source code generated on : Thu Oct 22 17:21:16 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -32,7 +32,7 @@ extern "C"
 
 // Block signals (default storage)
 struct B_speedlimiter_T {
-  SL_Bus_speedlimiter_std_msgs_Float64 In1;// '<S9>/In1'
+  SL_Bus_speedlimiter_std_msgs_Int16 In1;// '<S9>/In1'
   SL_Bus_speedlimiter_std_msgs_Float64 In1_j;// '<S8>/In1'
   SL_Bus_speedlimiter_std_msgs_Float64 In1_m;// '<S7>/In1'
 };
@@ -41,7 +41,7 @@ struct B_speedlimiter_T {
 struct DW_speedlimiter_T {
   ros_slros_internal_block_GetP_T obj; // '<Root>/Get Parameter1'
   ros_slroscpp_internal_block_P_T obj_n;// '<S2>/SinkBlock'
-  ros_slroscpp_internal_block_S_T obj_j;// '<S6>/SourceBlock'
+  ros_slroscpp_internal_block_S_T obj_m;// '<S6>/SourceBlock'
   ros_slroscpp_internal_block_S_T obj_g;// '<S5>/SourceBlock'
   ros_slroscpp_internal_block_S_T obj_nf;// '<S4>/SourceBlock'
 };
@@ -129,10 +129,10 @@ extern volatile boolean_T runModel;
 //  '<S3>'   : 'speedlimiter/SpeedLimiter'
 //  '<S4>'   : 'speedlimiter/Subscribe'
 //  '<S5>'   : 'speedlimiter/Subscribe1'
-//  '<S6>'   : 'speedlimiter/Subscribe2'
+//  '<S6>'   : 'speedlimiter/Subscribe3'
 //  '<S7>'   : 'speedlimiter/Subscribe/Enabled Subsystem'
 //  '<S8>'   : 'speedlimiter/Subscribe1/Enabled Subsystem'
-//  '<S9>'   : 'speedlimiter/Subscribe2/Enabled Subsystem'
+//  '<S9>'   : 'speedlimiter/Subscribe3/Enabled Subsystem'
 
 #endif                                 // SPEEDLIMITER_H_
 

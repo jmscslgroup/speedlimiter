@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'speedlimiter'.
 //
-// Model version                  : 2.4
+// Model version                  : 2.11
 // Simulink Coder version         : 26.1 (R2026a) 20-Nov-2025
-// C/C++ source code generated on : Thu Oct 22 16:01:18 2026
+// C/C++ source code generated on : Thu Oct 22 17:21:16 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -44,6 +44,7 @@ void speedlimiter_step(void)
 {
   SL_Bus_speedlimiter_std_msgs_Float64 rtb_BusAssignment;
   SL_Bus_speedlimiter_std_msgs_Float64 rtb_SourceBlock_o2_f_0;
+  SL_Bus_speedlimiter_std_msgs_Int16 rtb_SourceBlock_o2_0;
   real_T b_value;
   boolean_T b_varargout_1;
 
@@ -64,9 +65,9 @@ void speedlimiter_step(void)
   // End of Outputs for SubSystem: '<S5>/Enabled Subsystem'
   // End of Outputs for SubSystem: '<Root>/Subscribe1'
 
-  // Outputs for Atomic SubSystem: '<Root>/Subscribe2'
+  // Outputs for Atomic SubSystem: '<Root>/Subscribe3'
   // MATLABSystem: '<S6>/SourceBlock'
-  b_varargout_1 = Sub_speedlimiter_48.getLatestMessage(&rtb_SourceBlock_o2_f_0);
+  b_varargout_1 = Sub_speedlimiter_71.getLatestMessage(&rtb_SourceBlock_o2_0);
 
   // Outputs for Enabled SubSystem: '<S6>/Enabled Subsystem' incorporates:
   //   EnablePort: '<S9>/Enable'
@@ -74,12 +75,12 @@ void speedlimiter_step(void)
   // Start for MATLABSystem: '<S6>/SourceBlock'
   if (b_varargout_1) {
     // SignalConversion generated from: '<S9>/In1'
-    speedlimiter_B.In1 = rtb_SourceBlock_o2_f_0;
+    speedlimiter_B.In1 = rtb_SourceBlock_o2_0;
   }
 
   // End of Start for MATLABSystem: '<S6>/SourceBlock'
   // End of Outputs for SubSystem: '<S6>/Enabled Subsystem'
-  // End of Outputs for SubSystem: '<Root>/Subscribe2'
+  // End of Outputs for SubSystem: '<Root>/Subscribe3'
 
   // MATLABSystem: '<Root>/Get Parameter1'
   ParamGet_speedlimiter_19.get_parameter(&b_value);
@@ -107,7 +108,8 @@ void speedlimiter_step(void)
   //   Sum: '<S3>/Add'
   //   Sum: '<S3>/max allowed speed'
   //
-  if ((speedlimiter_B.In1.Data + b_value) - speedlimiter_B.In1_m.Data > 0.0) {
+  if ((static_cast<real_T>(speedlimiter_B.In1.Data) + b_value) -
+      speedlimiter_B.In1_m.Data > 0.0) {
     // Saturate: '<S3>/minmax accel in'
     if (speedlimiter_B.In1_j.Data > 1.5) {
       // BusAssignment: '<Root>/Bus Assignment'
@@ -202,19 +204,19 @@ void speedlimiter_initialize(void)
     // End of Start for MATLABSystem: '<S5>/SourceBlock'
     // End of SystemInitialize for SubSystem: '<Root>/Subscribe1'
 
-    // SystemInitialize for Atomic SubSystem: '<Root>/Subscribe2'
+    // SystemInitialize for Atomic SubSystem: '<Root>/Subscribe3'
     // Start for MATLABSystem: '<S6>/SourceBlock'
-    speedlimiter_DW.obj_j.matlabCodegenIsDeleted = false;
-    speedlimiter_DW.obj_j.isInitialized = 1;
+    speedlimiter_DW.obj_m.matlabCodegenIsDeleted = false;
+    speedlimiter_DW.obj_m.isInitialized = 1;
     for (i = 0; i < 14; i++) {
       b_zeroDelimTopic_0[i] = b_zeroDelimTopic_4[i];
     }
 
-    Sub_speedlimiter_48.createSubscriber(&b_zeroDelimTopic_0[0], 1);
-    speedlimiter_DW.obj_j.isSetupComplete = true;
+    Sub_speedlimiter_71.createSubscriber(&b_zeroDelimTopic_0[0], 1);
+    speedlimiter_DW.obj_m.isSetupComplete = true;
 
     // End of Start for MATLABSystem: '<S6>/SourceBlock'
-    // End of SystemInitialize for SubSystem: '<Root>/Subscribe2'
+    // End of SystemInitialize for SubSystem: '<Root>/Subscribe3'
 
     // SystemInitialize for Atomic SubSystem: '<Root>/Subscribe'
     // Start for MATLABSystem: '<S4>/SourceBlock'
@@ -262,14 +264,14 @@ void speedlimiter_terminate(void)
   // End of Terminate for MATLABSystem: '<S5>/SourceBlock'
   // End of Terminate for SubSystem: '<Root>/Subscribe1'
 
-  // Terminate for Atomic SubSystem: '<Root>/Subscribe2'
+  // Terminate for Atomic SubSystem: '<Root>/Subscribe3'
   // Terminate for MATLABSystem: '<S6>/SourceBlock'
-  if (!speedlimiter_DW.obj_j.matlabCodegenIsDeleted) {
-    speedlimiter_DW.obj_j.matlabCodegenIsDeleted = true;
+  if (!speedlimiter_DW.obj_m.matlabCodegenIsDeleted) {
+    speedlimiter_DW.obj_m.matlabCodegenIsDeleted = true;
   }
 
   // End of Terminate for MATLABSystem: '<S6>/SourceBlock'
-  // End of Terminate for SubSystem: '<Root>/Subscribe2'
+  // End of Terminate for SubSystem: '<Root>/Subscribe3'
 
   // Terminate for MATLABSystem: '<Root>/Get Parameter1'
   if (!speedlimiter_DW.obj.matlabCodegenIsDeleted) {

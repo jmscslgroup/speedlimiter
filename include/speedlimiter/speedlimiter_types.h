@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'speedlimiter'.
 //
-// Model version                  : 2.4
+// Model version                  : 2.11
 // Simulink Coder version         : 26.1 (R2026a) 20-Nov-2025
-// C/C++ source code generated on : Thu Oct 22 16:01:18 2026
+// C/C++ source code generated on : Thu Oct 22 17:21:16 2026
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -26,6 +26,17 @@
 struct SL_Bus_speedlimiter_std_msgs_Float64
 {
   real_T Data;
+};
+
+#endif
+
+#ifndef DEFINED_TYPEDEF_FOR_SL_BUS_SPEEDLIMITER_STD_MSGS_INT16_
+#define DEFINED_TYPEDEF_FOR_SL_BUS_SPEEDLIMITER_STD_MSGS_INT16_
+
+// MsgType=std_msgs/Int16
+struct SL_Bus_speedlimiter_std_msgs_Int16
+{
+  int16_T Data;
 };
 
 #endif

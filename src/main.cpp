@@ -3,9 +3,9 @@
 //
 // Code generated for Simulink model 'speedlimiter'.
 //
-// Model version                  : 2.4
+// Model version                  : 2.11
 // Simulink Coder version         : 26.1 (R2026a) 20-Nov-2025
-// C/C++ source code generated on : Thu Oct 22 16:01:22 2026
+// C/C++ source code generated on : Thu Oct 22 17:21:18 2026
 //
 
 #include <stdio.h>

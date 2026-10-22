@@ -9,8 +9,8 @@ SimulinkSubscriber<std_msgs::Float64, SL_Bus_speedlimiter_std_msgs_Float64> Sub_
 // For Block speedlimiter/Subscribe1
 SimulinkSubscriber<std_msgs::Float64, SL_Bus_speedlimiter_std_msgs_Float64> Sub_speedlimiter_2;
 
-// For Block speedlimiter/Subscribe2
-SimulinkSubscriber<std_msgs::Float64, SL_Bus_speedlimiter_std_msgs_Float64> Sub_speedlimiter_48;
+// For Block speedlimiter/Subscribe3
+SimulinkSubscriber<std_msgs::Int16, SL_Bus_speedlimiter_std_msgs_Int16> Sub_speedlimiter_71;
 
 // For Block speedlimiter/Publish
 SimulinkPublisher<std_msgs::Float64, SL_Bus_speedlimiter_std_msgs_Float64> Pub_speedlimiter_9;
